@@ -1,6 +1,24 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
+
+.navbar {
+  height: 15vh;
+  background-color: rgba(255, 170, 12, 0.594);
+  border-radius: 15px;
+}
+.profile,
+.flow,
+.search {
+  width: 50%;
+  height: 81vh;
+  margin: 1%;
+  border: 2px dashed rgba(255, 170, 12, 0.594);
+  border-radius: 15px;
+}
+.flow {
+  border-bottom: none;
 }
