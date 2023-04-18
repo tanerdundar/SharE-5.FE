@@ -1,5 +1,5 @@
 function Flow() {
-  return <div className="flow"></div>;
+  return <div className="flow">Flow</div>;
 }
 
 export default Flow;
