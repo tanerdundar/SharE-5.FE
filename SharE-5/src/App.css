@@ -23,11 +23,35 @@
   margin: 1%;
   border: 2px dashed rgba(255, 170, 12, 0.594);
   border-radius: 15px;
-}
-.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.search-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 37vh;
+  width: 80%;
+}
+.inputer {
+  height: 4vh;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 3vh;
+  border: 5px solid rgba(255, 170, 12, 0.594);
+  border-radius: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.get-button {
+  margin-top: 5vh;
+  height: 10vh;
+  width: 40%;
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(35, 35, 167, 0.484);
+  font-size: 4vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .profile-photo {
   margin-top: 3vh;
@@ -42,7 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 4%;
+  column-gap: 7%;
   width: 90%;
   background-color: rgba(255, 170, 12, 0.594);
   height: 14vh;
@@ -81,7 +105,7 @@
   background-color: black;
 }
 .numbers {
-  width: 28%;
+  width: 24%;
 }
 .number,
 .text {
