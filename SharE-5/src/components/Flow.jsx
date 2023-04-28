@@ -1,5 +1,26 @@
+import Post from "./Post";
+
 function Flow() {
-  return <div className="flow">Flow</div>;
+  return (
+    <div className="flow">
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+    </div>
+  );
 }
 
 export default Flow;

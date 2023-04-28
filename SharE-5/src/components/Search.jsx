@@ -18,7 +18,7 @@ function Search() {
           </div>
         </div>
       ) : (
-        <Profile />
+        <Profile isMe={false} />
       )}
     </>
   );

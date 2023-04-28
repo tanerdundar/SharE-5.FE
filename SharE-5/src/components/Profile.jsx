@@ -1,7 +1,10 @@
 import Numbers from "./Numbers";
 import MiniProfile from "./MiniProfile";
+import { useState } from "react";
+import Follow from "./Follow";
 
-function Profile() {
+function Profile(props) {
+  const [isMe, setIsMe] = useState(props.isMe);
   return (
     <div id="profile" className="profile">
       <div className="profile-photo"></div>
@@ -13,7 +16,8 @@ function Profile() {
         <Numbers text="Followers" />
         <Numbers text="Followings" />
       </div>
-      <MiniProfile />
+
+      {isMe ? <MiniProfile /> : <Follow />}
     </div>
   );
 }
