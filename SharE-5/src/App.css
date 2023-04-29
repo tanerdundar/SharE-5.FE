@@ -185,7 +185,7 @@
   margin-top: 18vh;
 }
 .signup-page {
-  margin-top: 11vh;
+  margin-top: 5vh;
 }
 .signup-user {
   padding: 1vh 8%;
@@ -252,4 +252,7 @@ input {
 .wrong-empty {
   width: 100%;
   height: 2vh;
+}
+.email {
+  padding-left: 17%;
 }

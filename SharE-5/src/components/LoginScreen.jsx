@@ -8,17 +8,14 @@ function LoginScreen(props) {
     props.situ();
   };
   const toSignPage = () => {
-    setSigned(false);
-  };
-  const toTrue = () => {
-    setSigned(true);
+    setSigned(!signed);
   };
   return (
     <div className="login">
       {signed ? (
-        <LoginPage fonk={signer} fonk2={toSignPage} />
+        <SignupPage fonk={signer} fonk2={toSignPage} />
       ) : (
-        <SignupPage fonk={signer} fonk2={toTrue} />
+        <LoginPage fonk={signer} fonk2={toSignPage} />
       )}
     </div>
   );
