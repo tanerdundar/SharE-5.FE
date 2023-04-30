@@ -10,11 +10,9 @@ function SignupPage(props) {
   const [wrongName, setWrongName] = useState(false);
   const [wrongEmail, setWrongEmail] = useState(false);
   const [wrongPassword, setWrongPasword] = useState(false);
-  const [userAlert, setUserAlert] = useState("Existing user name!..");
-  const [emailAlert, setEmailAlert] = useState(
-    "There is already a user with this email."
-  );
-  const [passwordAlert, setPasswordAlert] = useState("Different passwords");
+  const [userAlert, setUserAlert] = useState("");
+  const [emailAlert, setEmailAlert] = useState("");
+  const [passwordAlert, setPasswordAlert] = useState("");
   const [userNameInputValue, setUserNameInputValue] = useState("");
   const [emailInputValue, setEmailInputValue] = useState("");
   const [passwordInputValue, setPasswordInputValue] = useState("");
@@ -35,6 +33,9 @@ function SignupPage(props) {
     const userNameResult = await checkUserName();
     const emailResult = await chackEmail();
     const passwordResult = await checkPassword();
+    setEmailAlert("");
+    setPasswordAlert("");
+    setUserAlert("");
     if (userNameResult || userNameInputValue.length < 5) {
       if (userNameResult) {
         setUserAlert("Existing user name!..");
@@ -45,12 +46,11 @@ function SignupPage(props) {
       }
     } else {
       if (emailResult || checkMailFormat()) {
-        if (emailResult) {
-          setEmailAlert("There is already a user with this email.");
-        }
         if (checkMailFormat()) {
           setWrongEmail(true);
           setEmailAlert("Please type a valid email...");
+        } else if (emailResult) {
+          setEmailAlert("There is already a user with this email.");
         }
       } else {
         if (passwordResult || passwordInputValue.length < 6) {
